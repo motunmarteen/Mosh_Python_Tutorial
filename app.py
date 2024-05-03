@@ -1,4 +1,5 @@
 # # # import math
+import random
 
 # # # # Print Function in Python
 # # # full_name = "Motun Marteen"
@@ -138,45 +139,45 @@
 
 # # Conditional statement
 
-# is_good_credit = False
-# price = 1000000
+is_good_credit = False
+price = 1000000
 
-# if is_good_credit:
-#     print(f"You will need to put down ${price/10} as down payment")
-# else:
-#     print(f"You will need to put down ${price/5} as down payment")
+if is_good_credit:
+    print(f"You will need to put down ${price/10} as down payment")
+else:
+    print(f"You will need to put down ${price/5} as down payment")
     
 # Logical Operators AND, OR
 
 # =============AND==============
 
-# has_high_income = True
-# has_good_credit = True
+has_high_income = True
+has_good_credit = True
 
-# if has_high_income and has_good_credit:
-#     print("Eligible for loan")
-# else:
-#     print("Not eligible for loan")
+if has_high_income and has_good_credit:
+    print("Eligible for loan")
+else:
+    print("Not eligible for loan")
 
 # # ===========OR==============
    
-# has_high_incomes = False
-# has_good_credits = True
+has_high_incomes = False
+has_good_credits = True
  
-# if has_high_incomes or has_good_credits:
-#     print("Eligible for loan")
-# else:
-#     print("Not eligible for loan")
+if has_high_incomes or has_good_credits:
+    print("Eligible for loan")
+else:
+    print("Not eligible for loan")
 
 # # ================NOT==================
 
-# has_good_creditt = True
-# has_criminal_record = True
+has_good_creditt = True
+has_criminal_record = True
  
-# if has_good_creditt and not has_criminal_record:
-#     print("Eligible for loan")
-# else:
-#     print("Not eligible for loan")
+if has_good_creditt and not has_criminal_record:
+    print("Eligible for loan")
+else:
+    print("Not eligible for loan")
 
 # # AND : both
 # # OR : at least one
@@ -188,15 +189,15 @@
 # # while comparison operator has two equal signs (==)
  
  
-# name = input("What is your name? ")
-# length_name = len(name)
+name = input("What is your name? ")
+length_name = len(name)
 
-# if length_name < 3:
-#     print("Name must be at least 3 characters")
-# elif length_name > 50:
-#     print("Name can be a maximum of 50 characters")
-# else:
-#     print("Name looks good")
+if length_name < 3:
+    print("Name must be at least 3 characters")
+elif length_name > 50:
+    print("Name can be a maximum of 50 characters")
+else:
+    print("Name looks good")
 
 
 # Day 4
@@ -221,3 +222,56 @@ elif unit == "K":
     print(f"You are {kilogram} pounds")
 else:
     print("incorrect input")
+    
+    
+# While Loop
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+print("Done")
+
+# Guessing game
+
+secret_guess = random.randint(1, 7)
+num_of_guesses = 0
+guess_limit = 3
+
+# # Note: Always write code like a story
+while num_of_guesses < guess_limit:
+    num_of_guesses += 1
+    user_guess = int(input("Guess a number from 1 to 7: "))
+    if secret_guess == user_guess:
+        print("You won!")
+        break
+else:
+    print("Sorry, you failed")
+
+
+
+
+user_input = ""
+started = False
+stopped = False
+
+while True:
+    user_input = input("What do you want to do to the car? ").lower()
+    if user_input == 'start':
+        if started:
+            print("Car already started")
+        else:
+            started = True
+            print("Car started...Ready to go!")
+    elif user_input == 'stop':
+        if not started:
+            print("Car is already stopped")
+        else:
+            started = False
+            print("Car stopped.")
+    elif user_input == 'help':
+        print("Start - to start the car\nStop - to stop the car\nQuit - to exit")
+    elif user_input == 'quit':
+        break
+    else:
+        print("sorry, I don't understand that...")
