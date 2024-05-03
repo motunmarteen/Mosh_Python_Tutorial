@@ -150,50 +150,74 @@
 
 # =============AND==============
 
-has_high_income = True
-has_good_credit = True
+# has_high_income = True
+# has_good_credit = True
 
-if has_high_income and has_good_credit:
-    print("Eligible for loan")
-else:
-    print("Not eligible for loan")
+# if has_high_income and has_good_credit:
+#     print("Eligible for loan")
+# else:
+#     print("Not eligible for loan")
 
-# ===========OR==============
+# # ===========OR==============
    
-has_high_incomes = False
-has_good_credits = True
+# has_high_incomes = False
+# has_good_credits = True
  
-if has_high_incomes or has_good_credits:
-    print("Eligible for loan")
+# if has_high_incomes or has_good_credits:
+#     print("Eligible for loan")
+# else:
+#     print("Not eligible for loan")
+
+# # ================NOT==================
+
+# has_good_creditt = True
+# has_criminal_record = True
+ 
+# if has_good_creditt and not has_criminal_record:
+#     print("Eligible for loan")
+# else:
+#     print("Not eligible for loan")
+
+# # AND : both
+# # OR : at least one
+# # NOT : reverses the value to True or False
+
+# # Comparison Operators
+# # >, <, >=, <=, ==, !=
+# # Assignment operator has only one equal sign (=)
+# # while comparison operator has two equal signs (==)
+ 
+ 
+# name = input("What is your name? ")
+# length_name = len(name)
+
+# if length_name < 3:
+#     print("Name must be at least 3 characters")
+# elif length_name > 50:
+#     print("Name can be a maximum of 50 characters")
+# else:
+#     print("Name looks good")
+
+
+# Day 4
+# 01:16:17 Weight Converter Program 
+# 01:20:43 While Loops
+# 01:24:07 Building a Guessing Game
+# 01:30:51 Building the Car Game
+# 01:41:48 For Loops
+
+# A program that converts Pound to Kg and Kg to Pounds
+
+weight = float(input("Weight: "))
+
+kilogram = weight / 0.45
+pounds = weight * 0.45
+
+unit = input("(L)bs or (K)g: ").upper()
+
+if unit == "L":
+    print(f"You are {pounds} kilos")
+elif unit == "K":
+    print(f"You are {kilogram} pounds")
 else:
-    print("Not eligible for loan")
-
-# ================NOT==================
-
-has_good_creditt = True
-has_criminal_record = True
- 
-if has_good_creditt and not has_criminal_record:
-    print("Eligible for loan")
-else:
-    print("Not eligible for loan")
-
-# AND : both
-# OR : at least one
-# NOT : reverses the value to True or False
-
-# Comparison Operators
-# >, <, >=, <=, ==, !=
-# Assignment operator has only one equal sign (=)
-# while comparison operator has two equal signs (==)
- 
- 
-name = input("What is your name? ")
-length_name = len(name)
-
-if length_name < 3:
-    print("Name must be at least 3 characters")
-elif length_name > 50:
-    print("Name can be a maximum of 50 characters")
-else:
-    print("Name looks good")
+    print("incorrect input")
